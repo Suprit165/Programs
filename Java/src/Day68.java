@@ -1,23 +1,23 @@
 
-//class Parent
-//{
-//	Plane fun()
-//	{
-//		System.out.println("Inside parent class fun()");
-//		Plane p = new Plane();
-//		return p;
-//	}
-//}
-//
-//class Child extends Parent
-//{
-//	CargoPlane fun()
-//	{
-//		System.out.println("Inside child class fun()");
-//		CargoPlane cp = new CargoPlane();
-//		return cp;
-//	}
-//}
+class Parent
+{
+	Plane fun()
+	{
+		System.out.println("Inside parent class fun()");
+		Plane p = new Plane();
+		return p;
+	}
+}
+
+class Child extends Parent
+{
+	CargoPlane fun()
+	{
+		System.out.println("Inside child class fun()");
+		CargoPlane cp = new CargoPlane();
+		return cp;
+	}
+}
 
 class Charger
 {
@@ -94,8 +94,8 @@ public class Day68 {
 
 	public static void main(String[] args) {
 
-//		Child c = new Child();
-//		c.fun();
+		Child c = new Child();
+		c.fun();
 		
 		Charger c = new Charger("Oneplus" ,45.5f);
 		
@@ -108,10 +108,10 @@ public class Day68 {
 		
 		m = null;
 		
-//		System.out.println(m.os.getName());
-//		System.out.println(m.os.getSize());
-//		
-//		m.hasA(c);
+		System.out.println(m.os.getName());
+		System.out.println(m.os.getSize());
+		
+		m.hasA(c);
 		
 		System.out.println(c.getName());
 		System.out.println(c.getVoltage());
