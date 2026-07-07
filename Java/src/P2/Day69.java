@@ -1,0 +1,301 @@
+package P2;
+
+import java.util.Scanner;
+
+//abstract class Plane
+//{
+//	abstract void takeOff();
+//	
+//	
+//	abstract void fly();
+//	
+//	
+//	abstract void land();
+//	
+//}
+//
+//class CargoPlane extends Plane
+//{
+//	void fly()
+//	{
+//		System.out.println("CargoPlane is flying at low height...");
+//	}
+//	
+//	void carryCargo()
+//	{
+//		System.out.println("CargoPlane is carrying cargo...");
+//	}
+//}
+//
+//class PassengerPlane extends Plane
+//{
+//	void fly()
+//	{
+//		System.out.println("PassengerPlane is flying at medium height...");
+//	}
+//	
+//	void carryPassenger()
+//	{
+//		System.out.println("PassengerPlane is carrying passenger...");
+//	}
+//}
+//
+//class FighterPlane extends Plane
+//{
+//	void fly()
+//	{
+//		System.out.println("FighterPlane is flying at great height...");
+//	}
+//	
+//	void carryWeapons()
+//	{
+//		System.out.println("FighterPlane is carrying weapons...");
+//	}
+//}
+//
+//
+//
+//class Airport
+//{
+//	void permit(Plane ref)
+//	{
+//		ref.takeOff();
+//		ref.fly();
+//		ref.land();
+//	}
+//}
+
+
+//class Square
+//{
+//	private float side;
+//	private float area;
+//	
+//	public void acceptInput()
+//	{
+//		Scanner scan = new Scanner(System.in);
+//		System.out.println("Enter the side");
+//		side = scan.nextInt();
+//	}
+//	
+//	
+//	public void calcArea()
+//	{
+//		area = side * side;
+//	}
+//	
+//	public void dispArea()
+//	{
+//		System.out.println(area);
+//	}
+//}
+//
+//
+//class Rectangle
+//{
+//	private float length;
+//	private float breadth;
+//	private float area;
+//	
+//	public void acceptInput()
+//	{
+//		Scanner scan = new Scanner(System.in);
+//		System.out.println("Enter the length");
+//		length = scan.nextInt();
+//		System.out.println("Enter the breadth");
+//		breadth = scan.nextInt();
+//	}
+//	
+//	public void calcArea()
+//	{
+//		area = length * breadth;
+//	}
+//	
+//	public void dispArea()
+//	{
+//		System.out.println(area);
+//	}
+//	
+//}
+//
+//class Circle
+//{
+//	private float radius; 
+//	private float area;
+//	
+//	public void acceptInput()
+//	{
+//		Scanner scan = new Scanner(System.in);
+//		System.out.println("Enter the radius");
+//		radius = scan.nextFloat();
+//	}
+//	
+//	public void calcArea()
+//	{
+//		area = 3.141f * radius * radius;
+//	}
+//	
+//	public void dispArea()
+//	{
+//		System.out.println(area);
+//	}
+//}
+
+
+//  #1 Abstraction Ex
+abstract class Shape
+{
+	float area;
+	
+	abstract public void acceptInput();
+	abstract public void calcArea();
+	
+	public void dispArea()
+	{
+		System.out.println(area);
+	}
+	
+}
+
+class Square extends Shape
+{
+	private float side;
+	
+	public void acceptInput()
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the side");
+		side = scan.nextInt();
+	}
+	
+	
+	public void calcArea()
+	{
+		area = side * side;
+	}
+}
+
+class Rectangle extends Shape
+{
+	private float length;
+	private float breadth;
+	
+	public void acceptInput()
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the length");
+		length = scan.nextInt();
+		System.out.println("Enter the breadth");
+		breadth = scan.nextInt();
+	}
+	
+	public void calcArea()
+	{
+		area = length * breadth;
+	}
+}
+
+class Circle extends Shape
+{
+	private float radius; 
+	
+	public void acceptInput()
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the radius");
+		radius = scan.nextFloat();
+	}
+	
+	public void calcArea()
+	{
+		area = 3.141f * radius * radius;
+	}
+}
+
+class Geometry
+{
+	static void permit(Shape ref)
+	{
+		ref.acceptInput();
+		ref.calcArea();
+		ref.dispArea();
+	}
+}
+
+
+
+// #2
+abstract class User
+{
+	abstract void scanQR();
+//	{
+//		System.out.println("Feature is under development");
+//	}
+//	
+//	public void bankTransfer()
+//	{
+//		System.out.println("Bank transfer in progress...");
+//		System.out.println("Bank transfer completed");
+//	}
+//	
+//	public void availableCashBack()
+//	{
+//		System.out.println("CashBack transfered to account...");
+//	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class Day69 {
+
+	public static void main(String[] args) {
+
+//		CargoPlane cp = new CargoPlane();
+//		PassengerPlane pp = new PassengerPlane();
+//		FighterPlane fp = new FighterPlane();
+//		
+//		Airport a = new Airport();
+//		a.permit(cp);
+//		a.permit(pp);
+//		a.permit(fp);
+		
+		
+		Square s = new Square();
+		Rectangle r = new Rectangle();
+		Circle c = new Circle();
+		
+//		s.acceptInput();
+//		s.calcArea();
+//		s.dispArea();
+//		
+//		r.acceptInput();
+//		r.calcArea();
+//		r.dispArea();
+//		
+//		c.acceptInput();
+//		c.calcArea();
+//		c.dispArea();
+		
+//		Geometry.permit(s);
+//		Geometry.permit(r);
+//		Geometry.permit(c);
+		
+		User u = new User();
+//		u.bankTransfer();
+//		u.availableCashBack();
+		u.scanQR();
+		
+		
+	}
+
+}

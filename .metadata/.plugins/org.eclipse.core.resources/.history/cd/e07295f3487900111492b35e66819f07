@@ -1,0 +1,95 @@
+package P2;
+
+import java.util.Scanner;
+
+class InvalidUserException extends Exception
+{
+
+	@Override
+	public String getMessage() 
+	{
+		return "Invalid card details... Try again";
+	}
+	
+}
+
+class ATM
+{
+	private int accNum = 1234;
+	private int pin = 9876;
+	int a;
+	int p;
+	
+	void acceptInput()
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the accNum");
+		a = scan.nextInt();
+		System.out.println("Enter the pin");
+		p = scan.nextInt();
+	}
+	
+	void validate() throws Exception
+	{
+		if(a == accNum && p == pin)
+		{
+			System.out.println("Collect your cash");
+		}
+		else
+		{
+//			System.out.println("Invalid card details..Try again");
+			InvalidUserException iue = new InvalidUserException();
+			System.out.println(iue.getMessage());
+			throw iue;
+		}
+	}
+	
+}
+
+class Bank
+{
+	void permit()
+	{
+		ATM a = new ATM();
+		
+		try 
+		{
+			a.acceptInput();
+			a.validate();
+		} 
+		catch (Exception e) 
+		{
+			try 
+			{
+				a.acceptInput();
+				a.validate();
+			} 
+			catch (Exception e2) 
+			{
+				
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+public class Day79 {
+
+	public static void main(String[] args) {
+		
+		
+		Bank b = new Bank();
+		b.permit();
+		
+
+	}
+
+}

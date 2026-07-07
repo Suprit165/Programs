@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class checkPrime {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		 
+		 int n1 = scan.nextInt();
+		 
+		 checkPrimes(n1);
+
+
+	}
+	
+	static void checkPrimes(int n)
+	{
+		int count = 0;
+		for(int i=2; count < n; i++)
+		{
+			if(printPrimes(i))
+			{
+				System.out.println(i);
+				count++;
+			}
+			
+		}
+//		if(count == 0)
+//		{
+//			System.out.println("Prime");
+//		}
+//		else
+//		{
+//			System.out.println("Not Prime");
+//
+//		}
+	}
+
+										
+	}
+	
+	
+

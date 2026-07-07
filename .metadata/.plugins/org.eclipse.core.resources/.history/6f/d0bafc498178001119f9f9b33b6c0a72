@@ -1,0 +1,70 @@
+
+
+class Plane
+{
+	void takeOff();
+	
+	void fly();
+	
+	void land();
+}
+
+class CargoPlane extends Plane
+{
+	void takeOff()
+	{
+		System.out.println("CargoPlane is taking off from a long runway...");
+	}
+	
+	void fly()
+	{
+		System.out.println("CargoPlane is flying at low height...");
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public class Day69 {
+
+	public static void main(String[] args) {
+
+		
+		
+	}
+
+}

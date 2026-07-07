@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;Day45.longestSubstring(...)&apos; to &apos;nonRepSubstring&apos;&#x0D;&#x0A;- Original project: &apos;Java&apos;&#x0D;&#x0A;- Original element: &apos;Day45.longestSubstring(...)&apos;&#x0D;&#x0A;- Renamed element: &apos;Day45.nonRepSubstring(...)&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;longestSubstring&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;{Day45.java[Day45~longestSubstring~QString;" name="nonRepSubstring" references="true" stamp="1779889306554" version="1.0"/>
+</session>

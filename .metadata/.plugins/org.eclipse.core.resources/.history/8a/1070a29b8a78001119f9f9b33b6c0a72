@@ -1,0 +1,92 @@
+package P2;
+
+import java.util.Scanner;
+
+interface Calculator
+{
+	void add();
+	void sub();
+	
+}
+
+class MyCalc1 implements Calculator
+{
+	public void add()
+	{
+		int a = 200;
+		int b = 100;
+		System.out.println(a+b);
+	}
+	
+	public void sub()
+	{
+		int a = 200;
+		int b = 100;
+		System.out.println(a-b);
+	}
+}
+
+class MyCalc2 implements Calculator
+{
+	public void add()
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the first num");
+		int a = scan.nextInt();
+		System.out.println("Enter the second num");
+		int b = scan.nextInt();
+		System.out.println(a+b);
+	}
+	
+	public void sub()
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the first num");
+		int a = scan.nextInt();
+		System.out.println("Enter the second num");
+		int b = scan.nextInt();
+		System.out.println(a-b);
+	}
+}
+
+
+class MyCalc3 implements Calculator
+{
+	public void add()
+	{
+		System.out.println(100+200);
+	}
+	
+	public void sub()
+	{
+		System.out.println(200-100);
+	}
+}
+
+
+
+
+
+public class Day72 {
+
+	public static void main(String[] args) {
+
+		MyCalc1 c1 = new MyCalc1();
+		MyCalc2 c2 = new MyCalc2();
+		MyCalc3 c3 = new MyCalc3();
+		
+		c1.add();
+		c1.sub();
+		
+		c2.add();
+		c2.sub();
+		
+		c3.add();
+		c3.sub();
+		
+		
+		
+		
+	}
+
+}

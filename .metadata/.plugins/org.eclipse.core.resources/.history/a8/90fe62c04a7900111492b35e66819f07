@@ -1,0 +1,172 @@
+package P2;
+
+import java.util.Scanner;
+
+//class InvalidUserException extends Exception
+//{
+//
+//	@Override
+//	public String getMessage() 
+//	{
+//		return "Invalid card details... Try again";
+//	}
+//	
+//}
+//
+//class ATM
+//{
+//	private int accNum = 1234;
+//	private int pin = 9876;
+//	int a;
+//	int p;
+//	
+//	void acceptInput()
+//	{
+//		Scanner scan = new Scanner(System.in);
+//		System.out.println("Enter the accNum");
+//		a = scan.nextInt();
+//		System.out.println("Enter the pin");
+//		p = scan.nextInt();
+//	}
+//	
+//	void validate() throws Exception
+//	{
+//		if(a == accNum && p == pin)
+//		{
+//			System.out.println("Collect your cash");
+//		}
+//		else
+//		{
+////			System.out.println("Invalid card details..Try again");
+//			InvalidUserException iue = new InvalidUserException();
+//			System.out.println(iue.getMessage());
+//			throw iue;
+//		}
+//	}
+//	
+//}
+//
+//class Bank
+//{
+//	void permit()
+//	{
+//		ATM a = new ATM();
+//		
+//		try 
+//		{
+//			a.acceptInput();
+//			a.validate();
+//		} 
+//		catch (Exception e) 
+//		{
+//			try 
+//			{
+//				a.acceptInput();
+//				a.validate();
+//			} 
+//			catch (Exception e2) 
+//			{
+//				try 
+//				{
+//					a.acceptInput();
+//					a.validate();
+//				} 
+//				catch (Exception e3) 
+//				{
+//					System.err.println("Card Blocked");
+//				}
+//			}
+//		}
+//	}
+//}
+
+
+class UnderAgeRxception extends Exception
+{
+
+	@Override
+	public String getMessage() 
+	{
+		return "You are too young have patience";	
+	}
+}
+
+class OverAgeException extends Exception
+{
+
+	@Override
+	public String getMessage() 
+	{
+		return "You are too old. cool down";
+	}
+	
+}
+
+class Applicant
+{
+	private int age;
+	
+	void acceptInput()
+	{
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the age");
+		int age = scan.nextInt();
+		
+	}
+	
+	void validate()
+	{
+		if(age >= 18)
+		{
+			System.out.println("Collect your DL");
+		}
+		else if(age < 18)
+		{
+			UnderAgeException uae = new UnderAgeException();
+			System.out.println(uae.getMessage());
+		}
+		
+		else
+		{
+			OverAgeException oae = new OverAgeException();
+			System.out.println(oae.getMessage());
+		}
+	}
+}
+
+
+class RTO
+{
+	void permit()
+	{
+		Applicant a = new Applicant();
+		a.acceptInput();
+		a.validate();
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+public class Day79 {
+
+	public static void main(String[] args) {
+		
+		
+//		Bank b = new Bank();
+//		b.permit();
+		
+		RTO r = new RTO();
+		r.permit();
+
+	}
+
+}
